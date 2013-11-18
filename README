@@ -1,0 +1,36 @@
+========================================================================================================================
+README - Facegov Dependency Parent POM
+
+Copyright (c) 2013 Pugliesewe.com.
+
+Emanuele Pugliese (puglieseweb@gmail.com)
+
+Site: http://www.facegov.com
+Code: https://github.com/facegov
+========================================================================================================================
+
+This is the dependencies parent pom for all facegov dependencies. The only point of these modules is to declare
+  dependencies as a convenience to other POMs that want those same dependencies
+
+Here are what the various modules are for:
+
+deps-api:
+
+  DAO framework code and utility classes. Instead of this minimal DAO framework will be possible to add Spring Data JPA dependencies.
+
+deps-hibernate:
+
+  Various Hibernate-, transaction- and ORM-related dependencies.
+
+deps-jpa:
+
+  Various dependencies for Spring Data JPA.
+
+deps-skin:
+
+  A common skin that we use across all the facegov web site via the Maven WAR plugin's overlay
+  mechanism. See http://maven.apache.org/plugins/maven-war-plugin/overlays.html for more info on this.
+
+deps-web:
+
+  Web-related dependencies.
