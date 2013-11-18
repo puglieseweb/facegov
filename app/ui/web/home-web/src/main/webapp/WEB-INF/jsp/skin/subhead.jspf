@@ -5,7 +5,7 @@
 	<div id="topNav">
 		<ul>
 			<li><a href="${homeUrl}">Home</a></li>
-			<li><a href="${contactListUrl}">Join</a></li>
+			<li><a href="${contactListUrl}">Contacts</a></li>
 		</ul>
 	</div>
 </div>

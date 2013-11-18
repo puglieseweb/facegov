@@ -6,70 +6,72 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ include file="/WEB-INF/jsp/urls.jspf" %>
 
-<c:url var="contactsJsUrl" value="/scripts/contacts.js" />
-<c:url var="searchByEmailUrl" value="/contacts/search.html" />
+<c:url var="contactsJsUrl" value="/scripts/contacts.js"/>
+<c:url var="searchByEmailUrl" value="/contacts/search.html"/>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>My Contacts</title>
-		<script type="text/javascript" src="${contactsJsUrl}"></script>
-	</head>
-	<body>
-		<ul id="breadcrumbs">
-			<li><a href="${homeUrl}">Home</a></li>
-		</ul>
-	
-		<h1>My Contacts</h1>
-		
-		<%--<c:if test="${param.saved}">--%>
-			<%--<div class="info alert">Contact saved.</div>--%>
-		<%--</c:if>--%>
-		<%--<c:if test="${param.deleted}">--%>
-			<%--<div class="info alert">Contact deleted.</div>--%>
-		<%--</c:if>--%>
-		
-		<c:choose>
-			<c:when test="${empty contactList}">
-				<p>Your contact list is empty. <a href="${newContactUrl}">Create a new contact.</a></p>
-			</c:when>
-			<c:otherwise>
-				<div class="tableActionBar">
-					${fn:length(contactList)} contacts |
-					<span class="vcardAdd icon"><a href="${newContactUrl}">Create new contact</a></span>
-				</div>
-				<table id="contactList" class="sortable">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>E-mail</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach var="contact" items="${contactList}">
-							<c:url var="contactUrl" value="/contacts/${contact.id}.html" />
-							<tr id="contact-${contact.id}">
-								<td><span class="vcard icon"><a href="${contactUrl}">${contact.fullName}</a></span></td>
-								<td><c:if test="${not empty contact.email}"><span class="email icon"><a href="mailto:${contact.email}">${contact.email} </a></span></c:if></td>
-								<td>
-									<span class="vcardDelete icon"><a class="deleteContact" href="#">Delete</a></span>
-									<form class="deleteForm" action="${contactUrl}" method="POST">
-										<input type="hidden" name="_method" value="DELETE" />
-									</form>
-								</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-			</c:otherwise>
-		</c:choose>
-		
-		<div class="panel" style="padding: 10px 20px">
-			<form action="${searchByEmailUrl}" method="get">
-				Search by e-mail (partial OK):&nbsp;
-				<input type="text" name="email" class="medium" />&nbsp;
-				<input type="submit" value="Search" />
-			</form>
-		</div>
-	</body>
+<head>
+    <title>My Contacts</title>
+    <script type="text/javascript" src="${contactsJsUrl}"></script>
+</head>
+<body>
+<ul id="breadcrumbs">
+    <li><a href="${homeUrl}">Home</a></li>
+</ul>
+
+<h1>Join the project</h1>
+
+<%--<c:if test="${param.saved}">--%>
+<%--<div class="info alert">Contact saved.</div>--%>
+<%--</c:if>--%>
+<%--<c:if test="${param.deleted}">--%>
+<%--<div class="info alert">Contact deleted.</div>--%>
+<%--</c:if>--%>
+
+<c:choose>
+    <c:when test="${empty contactList}">
+        <p>Your contact list is empty. <a href="${newContactUrl}">Create a new contact.</a></p>
+    </c:when>
+    <c:otherwise>
+        <div class="tableActionBar">
+                ${fn:length(contactList)} contacts |
+            <span class="vcardAdd icon"><a href="${newContactUrl}">Create new contact</a></span>
+        </div>
+        <table id="contactList" class="sortable">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="contact" items="${contactList}">
+                <c:url var="contactUrl" value="/contacts/${contact.id}.html"/>
+                <tr id="contact-${contact.id}">
+                    <td><span class="vcard icon"><a href="${contactUrl}">${contact.fullName}</a></span></td>
+                    <td><c:if test="${not empty contact.email}"><span class="email icon"><a
+                            href="mailto:${contact.email}">${contact.email} </a></span></c:if></td>
+                    <td>
+                        <%--<span class="vcardDelete icon"><a class="deleteContact" href="#">Delete</a></span>--%>
+
+                        <%--<form class="deleteForm" action="${contactUrl}" method="POST">--%>
+                            <%--<input type="hidden" name="_method" value="DELETE"/>--%>
+                        <%--</form>--%>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </c:otherwise>
+</c:choose>
+
+<div class="panel" style="padding: 10px 20px">
+    <form action="${searchByEmailUrl}" method="get">
+        Search by e-mail (partial OK):&nbsp;
+        <input type="text" name="email" class="medium"/>&nbsp;
+        <input type="submit" value="Search"/>
+    </form>
+</div>
+</body>
 </html>

@@ -12,8 +12,8 @@
 
 <c:url var="jqueryTablesorterJsUrl" value="/skin/scripts/jquery.tablesorter.min.js" />
 
-<c:url var="sipCssUrl" value="/skin/sip.css" />
-<c:url var="sipJsUrl" value="/skin/scripts/sip.js" />
+<c:url var="sipCssUrl" value="/skin/main.css" />
+<c:url var="sipJsUrl" value="/skin/scripts/main.js" />
 <c:url var="sipCoverImgUrl" value ="/skin/images/sip-cover.png" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -61,7 +61,8 @@
 						</div>
 					</div>
 					<div id="legal">
-						Copyright &copy; 2013 Puglieseweb.com
+						Copyright &copy; 2013 <a href="http://www.puglieseweb.com"
+                                                 title="Puglieseweb.com - Emanuele Pugliese's web reference">Puglieseweb.com</a>
 					</div>
 				</div>
 			</div>

@@ -7,11 +7,11 @@
 	<!-- Spring in Practice informational metadata -->
 	<context-param>
 		<param-name>appName</param-name>
-		<param-value>Open Source Social Network</param-value>
+		<param-value>Contact Manager</param-value>
 	</context-param>
 	<context-param>
 		<param-name>recipe</param-name>
-		<param-value>Facegov Opensource Project</param-value>
+		<param-value>2.5</param-value>
 	</context-param>
 	<context-param>
 		<param-name>aboutThisRecipe</param-name>

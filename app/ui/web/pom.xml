@@ -11,7 +11,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!-- shared web interface -->
         <module>web-skin</module>
+
+        <!-- web pages -->
+        <module>home-web</module>
         <module>nominee-web</module>
         <module>user-registration-web</module>
     </modules>
