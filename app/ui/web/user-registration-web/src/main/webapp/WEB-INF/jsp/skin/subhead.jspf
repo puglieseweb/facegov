@@ -6,6 +6,7 @@
 		<ul>
 			<li><a href="${homeUrl}">Home</a></li>
 			<li><a href="${contactListUrl}">Join</a></li>
+            <li><a href="http://facegov.homepc.it:8000/">Jira</a></li>
 		</ul>
 	</div>
 </div>

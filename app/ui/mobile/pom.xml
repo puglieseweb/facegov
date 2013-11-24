@@ -12,6 +12,8 @@
 
     <modules>
         <module>contact-list-mobile</module>
+        <module>user-registration-mobile</module>
+        <module>mobile-skin</module>
     </modules>
 
 </project>

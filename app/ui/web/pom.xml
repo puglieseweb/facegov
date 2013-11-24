@@ -15,7 +15,6 @@
         <module>web-skin</module>
 
         <!-- web pages -->
-        <module>home-web</module>
         <module>nominee-web</module>
         <module>user-registration-web</module>
     </modules>
