@@ -1,4 +1,4 @@
-========================================================================================================================
+=============================================
 README - Facegov Dependency Parent POM
 
 Copyright (c) 2013 Pugliesewe.com.
@@ -7,7 +7,7 @@ Emanuele Pugliese (puglieseweb@gmail.com)
 
 Site: http://www.facegov.com
 Code: https://github.com/facegov
-========================================================================================================================
+=============================================
 
 This is the dependencies parent pom for all facegov dependencies. The only point of these modules is to declare
   dependencies as a convenience to other POMs that want those same dependencies
