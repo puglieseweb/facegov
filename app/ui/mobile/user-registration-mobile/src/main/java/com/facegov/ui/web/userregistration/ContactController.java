@@ -20,7 +20,7 @@ import javax.validation.Valid;
 /**
  * Spring Web MVC controller exposing a RESTful interface for contact-related operations.
  * 
- * @author Willie Wheeler (willie.wheeler@gmail.com)
+ * @author Emanuele Pugliese
  */
 @Controller
 @RequestMapping(value = "/contacts")
